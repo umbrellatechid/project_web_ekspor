@@ -1,0 +1,19 @@
+{
+  "name": "web-ekspor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
