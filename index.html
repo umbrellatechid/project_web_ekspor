@@ -1,25 +1,504 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Ekspor</title>
+  <title>The Transport - Speed Supply For Transportation</title>
+  <meta name="description" content="Timely deliveries, accurate order fulfillment, and proper handling of goods contribute to customer satisfaction.">
+  
   <!-- Local Font Awesome (No CDN) -->
   <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  
   <!-- Local Tailwind CSS (No CDN) -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-6">
-  <div class="max-w-md w-full bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-700 text-center">
-    <div class="w-16 h-16 bg-blue-600/20 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-      <i class="fa-solid fa-ship"></i>
+<body class="bg-white text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ======================== 1. HERO & NAVBAR ======================== -->
+  <header id="hero-header" class="relative hero-bg text-white transition-all duration-700 ease-in-out">
+    <!-- Dark gradient overlay for atmosphere & readability -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#07141a]/95 via-[#07141a]/65 to-transparent pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-between min-h-[660px] md:min-h-[720px] pb-16">
+      
+      <!-- Top Navbar -->
+      <nav class="pt-6 pb-4 flex items-center justify-between border-b border-white/10">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <img src="https://placehold.co/120x36/0f172a/ffffff?text=Logo+120x36" alt="The Transport" class="h-8 md:h-9 object-contain">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#" class="text-white font-semibold transition">Home</a>
+          <a href="#about" class="text-gray-300 hover:text-white transition">About Us</a>
+          <a href="#services" class="text-gray-300 hover:text-white transition">Services</a>
+          <a href="#project" class="text-gray-300 hover:text-white transition">Portfolio</a>
+          <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+        </div>
+
+        <!-- Right Action Icons -->
+        <div class="flex items-center gap-5 text-gray-200">
+          <button class="hover:text-white transition text-sm p-1.5" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="hover:text-white transition text-sm p-1.5" aria-label="Account">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-white text-lg p-1.5 focus:outline-none" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#07141a]/95 backdrop-blur-md p-6 border border-white/10 mt-2 space-y-4">
+        <a href="#" class="block text-white font-semibold">Home</a>
+        <a href="#about" class="block text-gray-300 hover:text-white">About Us</a>
+        <a href="#services" class="block text-gray-300 hover:text-white">Services</a>
+        <a href="#project" class="block text-gray-300 hover:text-white">Portfolio</a>
+        <a href="#contact" class="block text-gray-300 hover:text-white">Contact</a>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pt-16 md:pt-24">
+        
+        <!-- Hero Text -->
+        <div class="max-w-xl">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+            Speed Supply<br>For Transportation
+          </h1>
+          <p class="text-gray-300 text-sm md:text-base mt-6 leading-relaxed max-w-md">
+            Timely deliveries, accurate order fulfillment, and proper handling of goods contribute to customer satisfaction.
+          </p>
+          <div class="mt-8">
+            <!-- Learn More button retains radius -->
+            <a href="#contact" class="inline-flex items-center gap-3 bg-white text-gray-950 font-bold px-7 py-3 rounded-full hover:bg-gray-100 transition shadow-xl text-sm group">
+              <span>Learn More</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Pagination Numbers (Right side) -->
+        <div class="flex flex-row md:flex-col items-center md:items-end gap-5 text-sm self-end md:self-center">
+          <button data-hero-index="1" class="hero-page-btn text-gray-400 hover:text-white transition flex items-center gap-2 cursor-pointer" aria-label="Slide 01">
+            <span class="hero-line hidden w-5 h-0.5 bg-white"></span>
+            <span>01</span>
+          </button>
+          <button data-hero-index="2" class="hero-page-btn text-white font-bold transition flex items-center gap-2 cursor-pointer" aria-label="Slide 02">
+            <span class="hero-line w-5 h-0.5 bg-white"></span>
+            <span>02</span>
+          </button>
+          <button data-hero-index="3" class="hero-page-btn text-gray-400 hover:text-white transition flex items-center gap-2 cursor-pointer" aria-label="Slide 03">
+            <span class="hero-line hidden w-5 h-0.5 bg-white"></span>
+            <span>03</span>
+          </button>
+        </div>
+
+      </div>
+
     </div>
-    <h1 class="text-2xl font-bold mb-2">Web Ekspor</h1>
-    <p class="text-slate-400 mb-6 text-sm">Tailwind CSS & Font Awesome telah terinstal secara lokal tanpa CDN.</p>
-    <div class="flex items-center justify-center gap-4 text-slate-300">
-      <span class="flex items-center gap-2 text-sm"><i class="fa-solid fa-check text-emerald-400"></i> Tailwind CSS</span>
-      <span class="flex items-center gap-2 text-sm"><i class="fa-solid fa-check text-emerald-400"></i> Font Awesome</span>
+  </header>
+
+  <!-- ======================== 2. PARTNER LOGOS ======================== -->
+  <section class="bg-white py-12 md:py-16 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-between gap-8 md:gap-12">
+      <img src="https://placehold.co/150x40/f1f5f9/475569?text=150x40+px" alt="Partner 1" class="h-7 md:h-9 object-contain">
+      <img src="https://placehold.co/150x40/f1f5f9/475569?text=150x40+px" alt="Partner 2" class="h-7 md:h-9 object-contain">
+      <img src="https://placehold.co/150x40/f1f5f9/475569?text=150x40+px" alt="Partner 3" class="h-7 md:h-9 object-contain">
+      <img src="https://placehold.co/150x40/f1f5f9/475569?text=150x40+px" alt="Partner 4" class="h-7 md:h-9 object-contain">
+      <img src="https://placehold.co/150x40/f1f5f9/475569?text=150x40+px" alt="Partner 5" class="h-7 md:h-9 object-contain">
     </div>
-  </div>
+  </section>
+
+  <!-- ======================== 3. ABOUT US ======================== -->
+  <section id="about" class="bg-white py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold block mb-2">About us</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+          We Bridge Distances, We<br>Deliver Dreams
+        </h2>
+        <p class="text-gray-500 text-sm md:text-base mt-4 leading-relaxed max-w-xl mx-auto">
+          A TMS is a software system that helps companies manage logistics associated with the movement of physical of goods.
+        </p>
+        <div class="mt-7">
+          <!-- Learn More button retains radius -->
+          <a href="#services" class="inline-block bg-[#111827] text-white px-8 py-2.5 rounded-full text-xs font-semibold hover:bg-black transition shadow-sm">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16 items-center">
+        <!-- Card 1: Worldwide Service -->
+        <div class="flex flex-col items-center group">
+          <div class="w-full overflow-hidden shadow-lg bg-gray-100 aspect-[4/5] max-w-[240px]">
+            <img src="https://placehold.co/240x300/f1f5f9/475569?text=240x300+px" alt="Worldwide Service" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-center font-bold text-gray-900 text-sm mt-4">Worldwide Service</h3>
+        </div>
+
+        <!-- Card 2: Centralise Documents (Taller / Center) -->
+        <div class="flex flex-col items-center group md:-mt-6">
+          <div class="w-full overflow-hidden shadow-2xl bg-gray-100 aspect-[4/5] max-w-[270px]">
+            <img src="https://placehold.co/270x340/0f172a/f8fafc?text=270x340+px" alt="Centralise Documents" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-center font-bold text-gray-900 text-sm mt-4">Centralise Documents</h3>
+        </div>
+
+        <!-- Card 3: Trustworthy, and secure -->
+        <div class="flex flex-col items-center group">
+          <div class="w-full overflow-hidden shadow-lg bg-gray-100 aspect-[4/5] max-w-[240px]">
+            <img src="https://placehold.co/240x300/f1f5f9/475569?text=240x300+px" alt="Trustworthy, and secure" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-center font-bold text-gray-900 text-sm mt-4">Trustworthy, and secure</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== 4. OUR SERVICES ======================== -->
+  <section id="services" class="bg-[#060c14] text-white py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div>
+        <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold block mb-3">Our Services</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-3xl">
+          Your Time Is Saved Via Logistic<br>And Transportation Solutions.
+        </h2>
+        <p class="text-gray-400 text-xs md:text-sm mt-3 max-w-xl leading-relaxed">
+          Speed Supply has various services and can be chosen according to our client's requirement
+        </p>
+      </div>
+
+      <!-- 2x2 Services Grid with divider lines -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-14 mt-16 border-t border-gray-800 pt-12">
+        
+        <!-- 01 Road Freight -->
+        <div class="group">
+          <span class="text-4xl md:text-5xl font-light text-gray-400 tracking-wider">01</span>
+          <div class="flex items-center gap-3 mt-4 text-white font-semibold text-base">
+            <i class="fa-solid fa-truck text-xs text-gray-300"></i>
+            <span>Road Freight</span>
+          </div>
+          <p class="text-gray-400 text-xs md:text-sm mt-2 leading-relaxed max-w-md">
+            Road transport is a versatile mode of freight carriage that offers speed, cost-efficiency and flexibility for door-to-door distribution services.
+          </p>
+        </div>
+
+        <!-- 02 Air Freight -->
+        <div class="group">
+          <span class="text-4xl md:text-5xl font-light text-gray-400 tracking-wider">02</span>
+          <div class="flex items-center gap-3 mt-4 text-white font-semibold text-base">
+            <i class="fa-solid fa-plane text-xs text-gray-300"></i>
+            <span>Air Freight</span>
+          </div>
+          <p class="text-gray-400 text-xs md:text-sm mt-2 leading-relaxed max-w-md">
+            TMS is a leader in providing both domestic and international air freight shipping solutions for your time-sensitive and high-value cargo.
+          </p>
+        </div>
+
+        <!-- 03 Sea Freight -->
+        <div class="group">
+          <span class="text-4xl md:text-5xl font-light text-gray-400 tracking-wider">03</span>
+          <div class="flex items-center gap-3 mt-4 text-white font-semibold text-base">
+            <i class="fa-solid fa-ship text-xs text-gray-300"></i>
+            <span>Sea Freight</span>
+          </div>
+          <p class="text-gray-400 text-xs md:text-sm mt-2 leading-relaxed max-w-md">
+            Freight management is the process of overseeing and managing the delivery of goods. Any company, large or small, that deals with cargo movement.
+          </p>
+        </div>
+
+        <!-- 04 Rail Freight -->
+        <div class="group">
+          <span class="text-4xl md:text-5xl font-light text-gray-400 tracking-wider">04</span>
+          <div class="flex items-center gap-3 mt-4 text-white font-semibold text-base">
+            <i class="fa-solid fa-train text-xs text-gray-300"></i>
+            <span>Rail Freight</span>
+          </div>
+          <p class="text-gray-400 text-xs md:text-sm mt-2 leading-relaxed max-w-md">
+            Freight management is the process of overseeing and managing the delivery of goods. Any company, large or small, that deals with cargo movement.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== 5. RECENT PROJECT ======================== -->
+  <section id="project" class="bg-white py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left Column: Large Worker Photo -->
+      <div class="flex justify-center lg:justify-start">
+        <div class="overflow-hidden shadow-2xl w-full max-w-md aspect-[4/5] bg-gray-100">
+          <img src="https://placehold.co/400x500/0f172a/f8fafc?text=400x500+px" alt="Warehouse Worker" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Right Column: Text & Warehouse Photo -->
+      <div>
+        <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold block mb-2">Recent Project</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+          Transporting<br>Across The World
+        </h2>
+        <p class="text-gray-500 text-sm md:text-base mt-4 leading-relaxed max-w-md">
+          A TMS is a software system that helps companies manage logistics associated with the movement of physical of goods.
+        </p>
+
+        <!-- Secondary Warehouse Image -->
+        <div class="mt-8 overflow-hidden shadow-lg w-full max-w-sm aspect-[16/10] bg-gray-100">
+          <img src="https://placehold.co/380x240/f1f5f9/475569?text=380x240+px" alt="Warehouse Storage" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== 6. CTA BANNER ======================== -->
+  <section class="max-w-6xl mx-auto px-6 mb-20">
+    <div class="cta-bg overflow-hidden shadow-2xl p-8 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative">
+      <div class="relative z-10 max-w-xl">
+        <h2 class="text-2xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
+          Let's Connect With Us<br>And Work Together
+        </h2>
+        <p class="text-gray-300 text-xs md:text-sm mt-3">
+          Tell us your requirement, we will work on it and give you best result.
+        </p>
+      </div>
+      <div class="relative z-10">
+        <a href="#contact" class="inline-block bg-white text-gray-950 font-bold px-8 py-3 text-xs md:text-sm hover:bg-gray-100 transition shadow-lg shrink-0">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 7. FAQ SECTION ======================== -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 text-center tracking-tight mb-12">
+        Frequently Asked Question
+      </h2>
+
+      <div class="space-y-3.5">
+        
+        <!-- FAQ 1 (Open by default) -->
+        <div class="faq-item bg-[#f8fafc] border border-gray-100 p-5 shadow-sm">
+          <div class="faq-header flex items-center justify-between cursor-pointer">
+            <span class="font-bold text-gray-900 text-xs md:text-sm">How do I contact customer support?</span>
+            <span class="faq-icon text-gray-700 bg-white border border-gray-200 w-7 h-7 flex items-center justify-center shadow-xs">
+              <i class="fa-solid fa-xmark text-xs"></i>
+            </span>
+          </div>
+          <div class="faq-content text-gray-500 text-xs md:text-sm mt-3.5 leading-relaxed pt-2 border-t border-gray-100">
+            Provide contact information for customer support, including phone numbers, email addresses, and any available chat support.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-[#f8fafc] border border-gray-100 p-5 shadow-sm">
+          <div class="faq-header flex items-center justify-between cursor-pointer">
+            <span class="font-bold text-gray-900 text-xs md:text-sm">How early should I arrive before departure?</span>
+            <span class="faq-icon text-gray-700 bg-white border border-gray-200 w-7 h-7 flex items-center justify-center shadow-xs">
+              <i class="fa-solid fa-plus text-xs"></i>
+            </span>
+          </div>
+          <div class="faq-content hidden text-gray-500 text-xs md:text-sm mt-3.5 leading-relaxed pt-2 border-t border-gray-100">
+            We recommend arriving at least 2 hours prior to scheduled departure for standard cargo handling, and 3 to 4 hours for international cross-border dispatches.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-[#f8fafc] border border-gray-100 p-5 shadow-sm">
+          <div class="faq-header flex items-center justify-between cursor-pointer">
+            <span class="font-bold text-gray-900 text-xs md:text-sm">How do logistics providers manage supply chain risks?</span>
+            <span class="faq-icon text-gray-700 bg-white border border-gray-200 w-7 h-7 flex items-center justify-center shadow-xs">
+              <i class="fa-solid fa-plus text-xs"></i>
+            </span>
+          </div>
+          <div class="faq-content hidden text-gray-500 text-xs md:text-sm mt-3.5 leading-relaxed pt-2 border-t border-gray-100">
+            Logistics providers manage risks through real-time GPS tracking, multi-modal backup routes, proactive customs compliance, and full transit cargo insurance.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-[#f8fafc] border border-gray-100 p-5 shadow-sm">
+          <div class="faq-header flex items-center justify-between cursor-pointer">
+            <span class="font-bold text-gray-900 text-xs md:text-sm">What happens if my bus/train/plane is delayed?</span>
+            <span class="faq-icon text-gray-700 bg-white border border-gray-200 w-7 h-7 flex items-center justify-center shadow-xs">
+              <i class="fa-solid fa-plus text-xs"></i>
+            </span>
+          </div>
+          <div class="faq-content hidden text-gray-500 text-xs md:text-sm mt-3.5 leading-relaxed pt-2 border-t border-gray-100">
+            Our 24/7 central dispatch automatically schedules alternate transportation routes and informs customers with continuous live status alerts.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== 8. TESTIMONIALS ======================== -->
+  <section class="bg-[#f4f8fb] py-24 md:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold block mb-2">Testimonials</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">What Our Customer Say</h2>
+      </div>
+
+      <!-- Testimonial Slider Row -->
+      <div class="flex items-center justify-between gap-4 md:gap-8">
+        
+        <!-- Prev Button -->
+        <button id="prev-testi" class="w-10 h-10 md:w-11 md:h-11 border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-gray-900 hover:border-gray-400 shadow-sm transition shrink-0" aria-label="Previous Testimonial">
+          <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
+
+        <!-- Main Testimonial Card Content -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-14 flex-1 max-w-3xl mx-auto">
+          
+          <!-- Quote and text -->
+          <div class="flex-1">
+            <div class="text-[#dbe8f0] text-5xl md:text-7xl font-serif font-black leading-none select-none -mb-3">““</div>
+            <p id="testi-text" class="text-gray-600 text-xs md:text-sm leading-relaxed transition-opacity duration-300">
+              When our own skills did not manage to get where we wanted, The Transport took care of the rest. When our own skills did not manage to get where we wanted, The Transport took care of the rest. When our own skills did not manage to get where we wanted, The Transport took care of the rest.
+            </p>
+          </div>
+
+          <!-- Author Info -->
+          <div class="flex flex-col items-center shrink-0">
+            <div class="w-20 h-20 md:w-22 md:h-22 overflow-hidden shadow-md bg-gray-200 mb-3 border-2 border-white">
+              <img id="testi-avatar" src="https://placehold.co/88x88/0284c7/ffffff?text=88x88" alt="Albert Flores" class="w-full h-full object-cover">
+            </div>
+            <h3 id="testi-author" class="font-bold text-gray-900 text-sm text-center">Albert Flores</h3>
+            <p id="testi-role" class="text-xs text-gray-400 text-center mt-0.5">CEO of mega company</p>
+          </div>
+
+        </div>
+
+        <!-- Next Button -->
+        <button id="next-testi" class="w-10 h-10 md:w-11 md:h-11 border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-gray-900 hover:border-gray-400 shadow-sm transition shrink-0" aria-label="Next Testimonial">
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ======================== 10. FOOTER ======================== -->
+  <footer id="contact" class="bg-white border-t border-gray-100 pt-16 pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <!-- Top Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-14 border-b border-gray-100">
+        
+        <!-- Column 1 & 2: Brand & Newsletter -->
+        <div class="lg:col-span-2">
+          <img src="https://placehold.co/120x32/0f172a/ffffff?text=Logo+120x32" alt="The Transport" class="h-6 object-contain mb-4">
+          <p class="text-xs text-gray-500 leading-relaxed max-w-sm mb-6">
+            Experience the convenience of our top-notch shipping services.
+          </p>
+          <!-- Email Subscription Form -->
+          <form onsubmit="event.preventDefault();" class="flex items-center border border-gray-200 p-1 max-w-xs focus-within:border-gray-500 transition">
+            <input type="email" placeholder="E-mail" class="px-4 py-2 text-xs text-gray-700 outline-none w-full bg-transparent" required>
+            <!-- Learn More button retains radius -->
+            <button type="submit" class="bg-[#111827] text-white px-5 py-2 rounded-full text-xs font-medium hover:bg-black transition whitespace-nowrap">
+              Learn More
+            </button>
+          </form>
+        </div>
+
+        <!-- Column 3: Service -->
+        <div>
+          <h4 class="font-bold text-gray-900 text-xs tracking-wider uppercase mb-4">Service</h4>
+          <ul class="space-y-2.5 text-xs text-gray-500">
+            <li><a href="#about" class="hover:text-gray-900 transition">About US</a></li>
+            <li><a href="#services" class="hover:text-gray-900 transition">Features</a></li>
+            <li><a href="#services" class="hover:text-gray-900 transition">Benefits</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Resource -->
+        <div>
+          <h4 class="font-bold text-gray-900 text-xs tracking-wider uppercase mb-4">Resource</h4>
+          <ul class="space-y-2.5 text-xs text-gray-500">
+            <li><a href="#" class="hover:text-gray-900 transition">Documentation</a></li>
+            <li><a href="#" class="hover:text-gray-900 transition">pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Contact Us -->
+        <div>
+          <h4 class="font-bold text-gray-900 text-xs tracking-wider uppercase mb-4">Contact Us</h4>
+          <ul class="space-y-3 text-xs text-gray-500">
+            <li>
+              <a href="mailto:support@thetransport.com" class="flex items-center gap-2.5 hover:text-gray-900 transition">
+                <i class="fa-regular fa-envelope text-gray-400"></i>
+                <span>Write to Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:24873690258" class="flex items-center gap-2.5 hover:text-gray-900 transition">
+                <i class="fa-solid fa-phone text-gray-400"></i>
+                <span>2487-369-0258</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="flex items-center gap-2.5 hover:text-gray-900 transition">
+                <i class="fa-regular fa-comments text-gray-400"></i>
+                <span>Chat with Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer Row -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Copyright -->
+        <p class="text-[11px] text-gray-400">
+          Copyright 2024 Autumn. All rights reserved.
+        </p>
+
+        <!-- Payment Icons Placeholder -->
+        <div class="flex items-center">
+          <img src="https://placehold.co/160x24/f1f5f9/475569?text=160x24+px" alt="Payment Methods" class="h-5 object-contain">
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex items-center gap-4 text-gray-600 text-sm">
+          <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-blue-700 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-black transition" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-pink-600 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Separated Local JavaScript File -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

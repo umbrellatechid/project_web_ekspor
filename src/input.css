@@ -1,1 +1,20 @@
 @import "tailwindcss";
+@source "../**/*.html";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility hero-bg {
+  background-image: url('../images/ChatGPT Image Sep 24, 2026, 11_18_16 AM.png');
+  background-size: cover;
+  background-position: center right;
+}
+
+@utility cta-bg {
+  background-image: url('../images/cta-bg-clean.webp');
+  background-size: cover;
+  background-position: center;
+}
