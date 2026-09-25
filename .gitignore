@@ -1,5 +1,7 @@
 .vscode/
 node_modules/
-agent.md
-AGENT.MD
+.agents/
 AGENTS.md
+DESIGN.md
+anti-slop-instalasi-plan.md
+plan-repaktor.md

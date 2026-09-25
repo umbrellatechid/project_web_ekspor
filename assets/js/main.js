@@ -7,7 +7,41 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    // Close mobile dropdown when a navigation link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   }
+
+  // Sticky Navbar with Scroll State (Background Primary & Pure White Text)
+  const mainNavbar = document.getElementById('main-navbar');
+  const navbarContainer = document.getElementById('navbar-container');
+
+  function handleNavbarScroll() {
+    if (!mainNavbar) return;
+    if (window.scrollY > 30) {
+      mainNavbar.classList.add('bg-[#07141a]/95', 'backdrop-blur-md', 'shadow-lg', 'border-white/10');
+      mainNavbar.classList.remove('border-transparent');
+      if (navbarContainer) {
+        navbarContainer.classList.remove('py-5', 'md:py-6');
+        navbarContainer.classList.add('py-3.5', 'md:py-4');
+      }
+    } else {
+      mainNavbar.classList.remove('bg-[#07141a]/95', 'backdrop-blur-md', 'shadow-lg', 'border-white/10');
+      mainNavbar.classList.add('border-transparent');
+      if (navbarContainer) {
+        navbarContainer.classList.remove('py-3.5', 'md:py-4');
+        navbarContainer.classList.add('py-5', 'md:py-6');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+  handleNavbarScroll();
 
   // FAQ Accordion Interactivity
   const faqItems = document.querySelectorAll('.faq-item');
@@ -22,11 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Close all items
         faqItems.forEach(otherItem => {
+          const otherBtn = otherItem.querySelector('.faq-header');
           const otherContent = otherItem.querySelector('.faq-content');
           const otherIcon = otherItem.querySelector('.faq-icon');
           if (otherContent && otherIcon) {
             otherContent.classList.add('hidden');
             otherIcon.innerHTML = '<i class="fa-solid fa-plus text-xs"></i>';
+          }
+          if (otherBtn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
           }
         });
 
@@ -34,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isOpen) {
           content.classList.remove('hidden');
           icon.innerHTML = '<i class="fa-solid fa-xmark text-xs"></i>';
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          btn.setAttribute('aria-expanded', 'false');
         }
       });
     }
@@ -42,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Testimonials Slider
   const testimonials = [
     {
-      text: "When our own skills did not manage to get where we wanted, The Transport took care of the rest. When our own skills did not manage to get where we wanted, The Transport took care of the rest. When our own skills did not manage to get where we wanted, The Transport took care of the rest.",
+      text: "When our in-house team faced bottlenecks in international dispatch, The Transport took over our freight routes. Every shipment arrived on schedule with complete customs compliance.",
       author: "Albert Flores",
-      role: "CEO of mega company"
+      role: "Managing Director, PT Nusantara Ekspor"
     },
     {
       text: "Speed Supply provided outstanding air and road freight coordination for our European and Asian distribution lines. Our supply chain latency dropped by 35% within the first two quarters.",
@@ -129,4 +170,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Newsletter Form Feedback Handler
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterEmail = document.getElementById('newsletter-email');
+  const newsletterMsg = document.getElementById('newsletter-msg');
+
+  if (newsletterForm && newsletterEmail && newsletterMsg) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (newsletterEmail.value.trim()) {
+        newsletterMsg.classList.remove('hidden');
+        newsletterEmail.value = '';
+        setTimeout(() => {
+          newsletterMsg.classList.add('hidden');
+        }, 5000);
+      }
+    });
+  }
 });

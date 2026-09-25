@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" fill="none">
+  <rect x="12" y="14" width="16" height="12" rx="2" stroke="#475569" stroke-width="2.5"/>
+  <path d="M16 14v-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#475569" stroke-width="2"/>
+  <text x="36" y="24" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#334155" letter-spacing="1">TRANS GLOBE</text>
+</svg>
